@@ -3,10 +3,10 @@ image: gitpod/workspace-full
 tasks:
   - name: Build and Run
     init: |
-      sudo apt update
-      sudo apt install -y openjdk-17-jdk
-      sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-17-openjdk-amd64/bin/java 1
-      sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+      curl -s "https://get.sdkman.io" | bash
+      source "$HOME/.sdkman/bin/sdkman-init.sh"
+      sdk install java 17.0.8-tem
+      sdk use java 17.0.8-tem
       java -version
       cd app
       mvn clean package
