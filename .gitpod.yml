@@ -5,8 +5,8 @@ tasks:
     init: |
       curl -s "https://get.sdkman.io" | bash
       source "$HOME/.sdkman/bin/sdkman-init.sh"
-      sdk install java 17.0.8-tem
-      sdk use java 17.0.8-tem
+      sdk install -y java 17.0.8-tem 
+      sdk use -y java 17.0.8-tem
       java -version
       cd app
       mvn clean package

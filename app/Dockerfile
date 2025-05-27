@@ -5,7 +5,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy the built JAR (assumes it will be built into 'target')
-COPY target/learningresources-0.0.1-SNAPSHOT.jar app.jar
+COPY target/learning-resource-tracker-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port used by Spring Boot
 EXPOSE 8080
